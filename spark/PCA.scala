@@ -9,7 +9,7 @@ object CPA {
 
   def main(args: Array[String]) {
 
-    val conf = new SparkConf().setMaster("local[*]").setAppName("CPAのサンプル")
+    val conf = new SparkConf().setMaster("local[*]").setAppName("PCAのサンプル")
     val sc = new SparkContext(conf)
 
     val c = 20
