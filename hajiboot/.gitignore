@@ -1,0 +1,16 @@
+target/
+.mvn/
+
+### STS ###
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+
+### IntelliJ IDEA ###
+.idea
+*.iml
+
+### Mac ###
+.DS_Store

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/"
+      layout:decorator="layout">
+  <head>
+    <title>顧客情報編集</title>
+  </head>
+  <body>
+    <div layout:fragment="content">
+      <form th:action="@{/customers/edit}" th:object="${customerForm}" method="post" class="form-horizontal">
+        <fieldset>
+          <legend>顧客情報編集</legend>
+          <div class="form-group" th:classappend="${#fields.hasErrors('lastName')}? 'has-error has-feedback'">
+            <label for="lastName" class="col-sm-2 control-label">姓</label>
+            <div class="col-sm-10">
+              <input type="text" id="lastName" name="lastName" th:field="*{lastName}"
+                     class="form-control" value="山田"/>
+              <span th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}">error!</span>
+            </div>
+          </div>
+          <div class="form-group" th:classappend="${#fields.hasErrors('firstName')}? 'has-error has-feedback'">
+            <label for="lastName" class="col-sm-2 control-label">名</label>
+            <div class="col-sm-10">
+              <input type="text" id="firstName" name="firstName" th:field="*{firstName}"
+                     class="form-control" value="太郎"/>
+              <span th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}">error!</span>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+              <input type="submit" name="goToTop" value="戻る" class="btn btn-default"/>
+              <input type="hidden" name="id" th:value="${param.id[0]}"/>
+              <input type="submit" value="更新" class="btn btn-primary"/>
+            </div>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+  </body>
+</html>
