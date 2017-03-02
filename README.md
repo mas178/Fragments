@@ -11,6 +11,7 @@
 
 - Python
   - [Sample to operate Excel via Python](pyxls-sample)
+  - [Checkio as a teaching material](checkio)
 
 - Java
   - [Sample of Spring Boot (書籍「はじめてのSpring Boot (改訂版)」をやった記録)](hajiboot)

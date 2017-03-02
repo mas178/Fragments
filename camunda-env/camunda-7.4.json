@@ -1,0 +1,12 @@
+{
+  "camunda": {
+    "url": "https://camunda.org/release/camunda-bpm/tomcat/7.4/",
+    "name": "camunda-bpm-tomcat-7.4.0",
+    "version": "7.4.0"
+    },
+  "driver": {
+    "url": "http://dev.mysql.com/get/Downloads/Connector-J/",
+    "name": "mysql-connector-java-5.1.38"
+  },
+  "tomcat": "apache-tomcat-8.0.24"
+}
